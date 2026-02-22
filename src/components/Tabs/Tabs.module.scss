@@ -3,15 +3,16 @@
 .root {
   display: grid;
   gap: 0.75rem;
+  max-width: 75rem;
 }
 
 .list {
   display: flex;
   gap: 0.5rem;
   padding: 0.35rem;
-  border-radius: $radius;
+  border-radius: $radius-md;
   border: 1px solid var(--color-border);
-  background: var(--color-bg);
+  background: var(--color-primary);
   width: fit-content;
 }
 
@@ -21,13 +22,14 @@
   background: transparent;
   color: inherit;
 
-  border-radius: calc($radius - 4px);
+  border-radius: calc($radius-md - 4px);
   padding: 0.45rem 0.7rem;
   cursor: pointer;
   opacity: 0.85;
 
   &:hover {
     opacity: 1;
+    // background: var(--color-primary-hover);
   }
 
   &:focus-visible {

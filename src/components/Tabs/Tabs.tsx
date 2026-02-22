@@ -2,7 +2,6 @@ import React, {
   createContext,
   useContext,
   useId,
-  useMemo,
   useRef,
   useState,
 } from 'react';
@@ -51,10 +50,12 @@ export function Tabs({
     onValueChange?.(v);
   };
 
-  const ctx = useMemo<TabsContextValue>(
-    () => ({ baseId, value: current, setValue, orientation }),
-    [baseId, current, orientation],
-  );
+  const ctx: TabsContextValue = {
+    baseId,
+    value: current,
+    setValue,
+    orientation,
+  };
 
   return (
     <TabsContext.Provider value={ctx}>
