@@ -1,0 +1,82 @@
+@use '../../styles/abstracts' as *;
+
+.viewport {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1100;
+
+  display: grid;
+  gap: 10px;
+  width: min(420px, calc(100vw - 32px));
+}
+
+.toast {
+  border-radius: $radius-md;
+  padding: 0.75rem 0.85rem;
+
+  background: rgba(0, 0, 0, 0.82);
+  color: var(--color-fg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+
+  display: grid;
+  gap: 0.35rem;
+}
+
+.row {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.98rem;
+}
+
+.message {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 0.92rem;
+  line-height: 1.25;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.actionBtn,
+.closeBtn {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  opacity: 0.85;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.25);
+    border-radius: calc($radius-md - 6px);
+  }
+}
+
+.success {
+  border-color: rgba(34, 197, 94, 0.35);
+}
+
+.error {
+  border-color: rgba(239, 68, 68, 0.45);
+}
+
+.info {
+  border-color: rgba(59, 130, 246, 0.45);
+}

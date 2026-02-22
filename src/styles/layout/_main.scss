@@ -1,0 +1,31 @@
+@use '../abstracts' as *;
+
+.main {
+  @include flex-column;
+  margin-top: $spacing-24;
+  height: auto;
+  gap: $spacing-24;
+  padding: $spacing-24;
+
+  @include respond($bp-lg) {
+    // flex-direction: row;
+    height: calc(100vh - 7.2rem - 3 * $spacing-24);
+  }
+
+  section {
+    @include flex-column-gap(2rem);
+    align-items: center;
+    border-radius: $radius-md;
+    border: 1px solid var(--color-border);
+    padding: 2.4rem;
+    width: 100%;
+
+    .container {
+      @include flex-center;
+
+      &.card-row {
+        @include flex-align-gap(center, 1rem);
+      }
+    }
+  }
+}

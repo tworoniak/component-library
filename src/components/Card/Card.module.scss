@@ -1,0 +1,33 @@
+@use '../../styles/abstracts' as *;
+
+.card {
+  border-radius: $radius-md;
+  background: var(--color-background);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 8px 24px var(--color-shadow);
+}
+
+.padding {
+  padding: 1rem;
+}
+
+.header {
+  padding: 1rem 1rem 0.25rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.description {
+  margin: 0.25rem 0 0;
+  opacity: 0.75;
+  font-size: 0.95rem;
+}
+
+.body {
+  padding: 0.75rem 1rem 1rem;
+}
