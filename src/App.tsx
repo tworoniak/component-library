@@ -4,8 +4,8 @@ import { Modal } from './components/Modal';
 import { Card, CardHeader, CardBody } from './components/Card';
 import { ToastProvider, useToast } from './components/Toast';
 import { Tabs, TabsList, TabsContent, TabsTrigger } from './components/Tabs';
-import { useWarnOnLeave } from './hooks/useWarnOnLeave';
-import { WarnOnLeaveModal } from './components/WarnOnLeaveModal/WarnOnLeaveModal';
+// import { useWarnOnLeave } from './hooks/useWarnOnLeave';
+// import { WarnOnLeaveModal } from './components/WarnOnLeaveModal/WarnOnLeaveModal';
 // import { WarnLink } from './components/WarnLink/WarnLink';
 // import { WarnButton } from './components/WarnButton/WarnButton';
 // import { Input } from './components/Input';
@@ -51,8 +51,8 @@ function ToastDemo() {
 function App() {
   const [openModal, setOpenModal] = useState(false);
 
-  const [shouldWarn, setShouldWarn] = useState(true); // <- your app-level condition
-  const { open, confirm, cancel } = useWarnOnLeave(shouldWarn); // request,
+  // const [shouldWarn, setShouldWarn] = useState(true); // <- your app-level condition
+  // const { open, confirm, cancel } = useWarnOnLeave(shouldWarn); // request,
 
   return (
     <>
@@ -258,11 +258,11 @@ function App() {
                 Button Style Link
               </ExternalLink>
 
-              <WarnOnLeaveModal
+              {/* <WarnOnLeaveModal
                 open={open}
                 onConfirm={confirm}
                 onCancel={cancel}
-              />
+              /> */}
             </div>
           </section>
         </main>
