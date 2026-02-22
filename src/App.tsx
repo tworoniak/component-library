@@ -3,6 +3,7 @@ import { Button } from './components/Button';
 import { Modal } from './components/Modal';
 import { Card, CardHeader, CardBody } from './components/Card';
 import { ToastProvider, useToast } from './components/Toast';
+import { Tabs, TabsList, TabsContent, TabsTrigger } from './components/Tabs';
 // import { Input } from './components/Input';
 
 function ToastDemo() {
@@ -41,6 +42,7 @@ function ToastDemo() {
 
 function App() {
   const [open, setOpen] = useState(false);
+
   return (
     <>
       <header>
@@ -121,25 +123,44 @@ function App() {
             </Card>
           </div>
         </section>
+
         <section>
+          <h2>Toast</h2>
           <div className='container'>
             <ToastProvider>
               <div style={{ padding: 24, display: 'grid', gap: 16 }}>
-                {/* <Tabs defaultValue='one'>
-                  <TabsList>
-                    <TabsTrigger value='one'>One</TabsTrigger>
-                    <TabsTrigger value='two'>Two</TabsTrigger>
-                    <TabsTrigger value='three'>Three</TabsTrigger>
-                  </TabsList>
-
-                  <TabsContent value='one'>Tab one content</TabsContent>
-                  <TabsContent value='two'>Tab two content</TabsContent>
-                  <TabsContent value='three'>Tab three content</TabsContent>
-                </Tabs> */}
-
                 <ToastDemo />
               </div>
             </ToastProvider>
+          </div>
+        </section>
+
+        <section>
+          <h2>Tabs</h2>
+          <div className='container'>
+            <Tabs defaultValue='one'>
+              <TabsList>
+                <TabsTrigger value='one'>One</TabsTrigger>
+                <TabsTrigger value='two'>Two</TabsTrigger>
+                <TabsTrigger value='three'>Three</TabsTrigger>
+              </TabsList>
+
+              <TabsContent value='one'>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+                facilis illo sit doloribus magnam, tempore dolore consequuntur
+                voluptates ducimus animi.
+              </TabsContent>
+              <TabsContent value='two'>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste
+                officia quibusdam atque numquam necessitatibus maiores qui
+                itaque repellendus illum illo?
+              </TabsContent>
+              <TabsContent value='three'>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+                ipsum velit illum repudiandae provident id eaque quos incidunt
+                adipisci blanditiis.
+              </TabsContent>
+            </Tabs>
           </div>
         </section>
       </main>
