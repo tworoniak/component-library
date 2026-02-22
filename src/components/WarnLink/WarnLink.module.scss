@@ -1,0 +1,33 @@
+.base {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.link {
+  color: var(--color-link, #2563eb);
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+
+  background: var(--color-primary, #111827);
+  color: #fff;
+
+  &:hover {
+    filter: brightness(1.05);
+  }
+
+  &:active {
+    transform: scale(0.99);
+  }
+}

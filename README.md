@@ -14,6 +14,14 @@ src/
             Card.module.scss
             Card.tsx
             index.ts
+        ExternalLinkGuard/
+            externalLink.context.ts
+            ExternalLink.module.scss
+            ExternalLink.tsx
+            externalLink.types.ts
+            externalLink.utils.ts
+            ExternalLinkGuard.tsx
+            index.ts
         Input/
             index.ts
             Input.module.scss
@@ -34,10 +42,21 @@ src/
             toast.types.ts
             toast.utils.ts
             ToastProvider.tsx
+        WarnButton/
+            WarnButton.tsx
+        WarnLink/
+            WarnLink.module.scss
+            WarnLink.tsx
+        WarnOnLeaveModal/
+            index.ts
+            WarnOnLeaveModal.module.scss
+            WarnOnLeaveModal.tsx
 
     hooks/
+        useBeforeUnload.ts
         useKeyDown.ts
         useLockBodyScroll.ts
+        useWarnOnLeave.ts
 
     styles/
         abstracts/
