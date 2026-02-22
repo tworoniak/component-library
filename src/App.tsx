@@ -49,6 +49,7 @@ function App() {
         <h1>Component Library</h1>
       </header>
       <main className='main'>
+        {/* Buttons */}
         <section>
           <h2>Buttons</h2>
           <div className='container'>
@@ -58,6 +59,7 @@ function App() {
           </div>
         </section>
 
+        {/* Modal */}
         <section>
           <h2>Modal</h2>
           <div className='container'>
@@ -73,6 +75,7 @@ function App() {
           </div>
         </section>
 
+        {/* Cards */}
         <section>
           <h2>Cards</h2>
           <div className='container card-row'>
@@ -124,6 +127,7 @@ function App() {
           </div>
         </section>
 
+        {/* Toast */}
         <section>
           <h2>Toast</h2>
           <div className='container'>
@@ -135,6 +139,7 @@ function App() {
           </div>
         </section>
 
+        {/* Tabs */}
         <section>
           <h2>Tabs</h2>
           <div className='container'>
